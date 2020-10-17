@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "26a6f39f-8178-4c3f-85b7-e2acbd2c330d",
+		"name": "API BASIC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Product1\",\r\n    \"desc\": \"1%\",\r\n    \"price\": 1.00,\r\n    \"images\": [],\r\n    \"userId\": \"5f077c0b65b1cd31ec702acf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/products/create",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Product1\",\r\n    \"desc\": \"1%\",\r\n    \"price\": 1.00,\r\n    \"images\": [],\r\n    \"userId\": \"5f077c0b65b1cd31ec702acf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/products/get-all",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-by-user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/products/get-by-user/5f077c0b65b1cd31ec702acf",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"get-by-user",
+								"5f077c0b65b1cd31ec702acf"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjA3N2MwYjY1YjFjZDMxZWM3MDJhY2YiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MDI4OTM4NTEsImV4cCI6MTYwMjg5NzQ1MX0.19imXlQXugadRWsmydxsUSV8JpZsm44yOHIGzSgskxo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test2.1\",\r\n    \"email\": \"test2.1@gmaill\",\r\n    \"data\": {\r\n        \"age\": 250,\r\n        \"isMale\": true\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/users/update",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjA3N2MwYjY1YjFjZDMxZWM3MDJhY2YiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MDI4OTM4NTEsImV4cCI6MTYwMjg5NzQ1MX0.19imXlQXugadRWsmydxsUSV8JpZsm44yOHIGzSgskxo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"5f8a3881af35e60aa4bad9e8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/users/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"juarez@gmail\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test\",\r\n    \"email\": \"test@gmail\",\r\n    \"password\": \"123\",\r\n    \"data\": {\r\n        \"age\": 250,\r\n        \"isMale\": false\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/users/create",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjA3N2MwYjY1YjFjZDMxZWM3MDJhY2YiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MDI4OTM4NTEsImV4cCI6MTYwMjg5NzQ1MX0.19imXlQXugadRWsmydxsUSV8JpZsm44yOHIGzSgskxo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/api/v1/users/get-all",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
